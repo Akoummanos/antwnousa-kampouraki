@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Crete Map</title>
-    <link rel="stylesheet" href="../index.css">
-</head>
+    <head>
+        <title>Crete Map</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+    </head>
 
-<body>
-
-      <div style="text-align: center;">       
-        <iframe frameborder=0 src='//www.zeemaps.com/pub?group=4080701' id="map"> </iframe>
+    <body>
+        <div style="text-align: center;">
+            <iframe frameborder=0 src='//www.zeemaps.com/pub?group=4080701' id="map"></iframe>
         </div>
 
-
-
-
-</body>
+        <div id="info-modal" class="modal">
+            <div class="modal-body">
+                <span class="modal-close">&times;</span>
+                <h2 id="modal-header">Header</h2>
+                <hr>
+                <p id="modal-content">Content</p>
+            </div>
+        </div>
+    </body>
 
 </html>

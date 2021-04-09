@@ -1,17 +1,14 @@
 h1#title {
     text-align: center;
-  }
+}
 
-  body {
+body {
     font-family: Arial, Helvetica, sans-serif;
     background: url("https://i.imgur.com/JWsAYJs.png");
+}
 
-  }
-
-
-
-  /* The Modal (background) */
-  .modal {
+/* The Modal (background) */
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -21,35 +18,33 @@ h1#title {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-  }
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
-  .modal-content {
+.modal-body {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
+}
 
-
-  .close1 {
+.modal-close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
 
-  .close1:hover,
-  .close1:focus {
+.modal-close:hover,
+.modal-close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  iframe#map {
+iframe#map {
     width: 75%;
     height: 500px;
-
-  }
+}
