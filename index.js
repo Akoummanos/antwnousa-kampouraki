@@ -1,13 +1,9 @@
-let modal, btn, span;
+let modal, btn, span, dataJSON;
 
 window.onload = function () {
     modal = document.getElementById("info-modal");
     btn = document.getElementById("Btn1");
     span = document.getElementsByClassName("modal-close")[0];
-
-    btn.onclick = function () {
-        modal.style.display = "block";
-    };
 
     span.onclick = function () {
         modal.style.display = "none";
@@ -18,8 +14,6 @@ window.onload = function () {
             modal.style.display = "none";
         }
     };
-
-    modalBody("Well, it works!");
 };
 
 function modalHead(head) {
@@ -30,4 +24,28 @@ function modalHead(head) {
 function modalBody(body) {
     let modalBody = document.getElementById("modal-content");
     modalBody.innerHTML = body;
+}
+
+function getData() {
+    let xhrObj = new XMLHttpRequest();
+
+    xhrObj.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            dataJSON = JSON.parse(this.responseText);
+        }
+    };
+
+    xhrObj.open("GET", "data.json", false);
+    xhrObj.send();
+}
+
+function modifyMarkerEvents() {
+    let iframe = document.getElementById("map");
+    let marker;
+
+    dataJSON.forEach((element) => {
+        marker = iframe.contentWindow.document.querySelector(
+            "[title='" + element.title + "']"
+        );
+    });
 }
