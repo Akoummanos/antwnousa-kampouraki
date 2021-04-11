@@ -57,3 +57,15 @@ footer {
     padding: 5px;
     background-color: rgb(240, 255, 255);
 }
+
+.border-main {
+  background-color: #808080;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+p#pp1 {
+  margin-right: 315px;
+  margin-left: 315px;
+}
