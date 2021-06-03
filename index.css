@@ -85,3 +85,7 @@ article {
     width: 75%;
     margin: auto;
 }
+
+#mapid {
+    height: 500px;
+}

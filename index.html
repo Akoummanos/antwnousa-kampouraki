@@ -4,6 +4,14 @@
     <head>
         <title>Ιστορικός Χάρτης της Κρήτης</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin="" />
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
         <script src="index.js"></script>
     </head>
 
@@ -21,9 +29,7 @@
                 </article>
 
                 <div style="text-align: center;">
-                    <iframe frameborder=0
-                        src='https://www.google.com/maps/d/u/0/embed?mid=1kY0aejmgrbwsB3bpNErEXy4PZiZqlHFg'
-                        id="map"></iframe>
+                    <div id="mapid"></div>
                 </div>
             </div>
         </div>
