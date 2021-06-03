@@ -5,6 +5,8 @@ window.onload = function () {
     btn = document.getElementById("Btn1");
     span = document.getElementsByClassName("modal-close")[0];
 
+    map_init();
+
     span.onclick = function () {
         modal.style.display = "none";
     };
