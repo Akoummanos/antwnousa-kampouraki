@@ -1,4 +1,5 @@
-let modal, btn, span, dataJSON;
+let modal, btn, span;
+let mymap, dataJSON;
 
 window.onload = function () {
     modal = document.getElementById("info-modal");
@@ -28,6 +29,22 @@ function modalBody(body) {
     modalBody.innerHTML = body;
 }
 
+function map_init() {
+    mymap = L.map("mapid").setView([35.25, 24.93], 13);
+
+    L.tileLayer(
+        "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}",
+        {
+            attribution:
+                'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: "abcd",
+            minZoom: 0,
+            maxZoom: 9,
+            ext: "png",
+        }
+    ).addTo(mymap);
+}
+
 function getData() {
     let xhrObj = new XMLHttpRequest();
 
@@ -39,15 +56,4 @@ function getData() {
 
     xhrObj.open("GET", "data.json", false);
     xhrObj.send();
-}
-
-function modifyMarkerEvents() {
-    let iframe = document.getElementById("map");
-    let marker;
-
-    dataJSON.forEach((element) => {
-        marker = iframe.contentWindow.document.querySelector(
-            "[title='" + element.title + "']"
-        );
-    });
 }
