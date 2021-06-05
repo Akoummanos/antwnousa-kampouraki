@@ -34,6 +34,11 @@ function map_init() {
     mymap = L.map("mapid", {
         zoomDelta: 0.25,
         zoomSnap: 0.5,
+        maxBounds: L.latLngBounds(
+            L.latLng(37.033, 26.378),
+            L.latLng(33.564, 23.225)
+        ),
+        maxBoundsViscosity: 0.5,
     }).setView([35.25, 24.93], 9);
 
     L.tileLayer(
