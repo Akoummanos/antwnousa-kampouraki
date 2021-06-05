@@ -31,7 +31,10 @@ function modalBody(body) {
 }
 
 function map_init() {
-    mymap = L.map("mapid").setView([35.25, 24.93], 9);
+    mymap = L.map("mapid", {
+        zoomDelta: 0.25,
+        zoomSnap: 0.5,
+    }).setView([35.25, 24.93], 9);
 
     L.tileLayer(
         "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.{ext}",
@@ -39,7 +42,7 @@ function map_init() {
             attribution:
                 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             subdomains: "abcd",
-            minZoom: 0,
+            minZoom: 8,
             maxZoom: 11,
             ext: "png",
         }
