@@ -75,7 +75,7 @@ p#pp1 {
 article {
     text-align: start;
     background-color: aliceblue;
-    width: 100%;
+    width: calc(100% - 10px);
     padding: 5px;
 }
 
